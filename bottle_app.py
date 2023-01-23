@@ -1,16 +1,16 @@
 
 # A very simple Bottle Hello World app for you to get started with...
-from bottle import default_app, route
+from bottle import default_app, route, error, template, request
+import sqlite3
 
-@route('/')
-def hello_world():
-    return 'Welcome to my Bottle To-Do list app!'
 
 application = default_app()
 
+@route('/')
+def hello_world():
+    landing_site = "<h2>Welcome to my Bottle To-Do list app!</h2> <p>The following routes are implemented: <p>"
+    return landing_site
 
-import sqlite3
-from bottle import route, run, error, template, request
 
 @route('/todo')
 def todo_list():

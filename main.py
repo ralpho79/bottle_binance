@@ -1,5 +1,4 @@
-import sqlite3
-from bottle import route, run, error, template, request
+from bottle import run
 import bottle_app
 
 run(host='localhost', port=8080, debug=True, reloader=True)
